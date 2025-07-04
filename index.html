@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inicio - Sistema de Gestión</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-link active">Inicio</a>
+    <a href="usuarios.html" class="nav-link">Gestión Usuarios</a>
+    <a href="#" class="nav-link">Publicaciones</a>
+  </nav>
+
+  <main>
+    <h2>Sistema de Gestión Usuarios</h2>
+    <div class="controls">
+      <label for="dataType">Seleccione Datos:</label>
+      <select id="dataType">
+        <option value="users">Usuarios</option>
+        <option value="posts">Publicaciones</option>
+        <option value="comments">Comentarios</option>
+      </select>
+      <button onclick="cargarDatos()">Cargar Datos</button>
+    </div>
+
+    <table id="tabla" class="display">
+      <thead>
+        <tr id="encabezado"></tr>
+      </thead>
+      <tbody id="cuerpo"></tbody>
+    </table>
+  </main>
+</body>
+</html>
