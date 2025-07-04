@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión Usuarios</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-link">Inicio</a>
+    <a href="usuarios.html" class="nav-link active">Gestión Usuarios</a>
+    <a href="#" class="nav-link">Publicaciones</a>
+  </nav>
+
+  <main>
+    <h2>Gestión Usuarios</h2>
+
+    <form id="usuarioForm" novalidate>
+      <div class="form-group">
+        <label>Nombre:
+          <input type="text" id="nombre" />
+          <span class="error" id="errNombre"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Usuario:
+          <input type="text" id="usuario" />
+          <span class="error" id="errUsuario"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Fecha Ingreso (dd/MM/yyyy):
+          <input type="text" id="fechaIngreso" />
+          <span class="error" id="errFecha"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Email:
+          <input type="text" id="email" />
+          <span class="error" id="errEmail"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Género:
+          <input type="text" id="genero" />
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Sitio Web:
+          <input type="text" id="sitioWeb" />
+        </label>
+      </div>
+
+      <button type="button" onclick="guardarUsuario()">Guardar</button>
+      <button type="button" onclick="cancelarFormulario()">Cancelar</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Usuario</th>
+          <th>Fecha</th>
+          <th>Email</th>
+          <th>Género</th>
+          <th>Sitio Web</th>
+        </tr>
+      </thead>
+      <tbody id="tablaUsuarios"></tbody>
+    </table>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
